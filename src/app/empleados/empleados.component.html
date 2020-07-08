@@ -12,12 +12,12 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>Masculino</td>
-                <td>70000</td>
+              <tr *ngFor= "let empleado of listEmpleados">
+                <td>{{ empleado.legajo }}</td>
+                <td>{{ empleado.nombre }}</td>
+                <td>{{ empleado.apellido }}</td>
+                <td>{{ empleado.genero }}</td>
+                <td>{{ empleado.salario }}</td>
               </tr>
             </tbody>
           </table>
