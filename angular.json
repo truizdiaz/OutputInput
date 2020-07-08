@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "EmpleadosList"
+    }
+  },
+  "defaultProject": "EmpleadosList",
+  "cli": {
+    "analytics": false
+  }
 }
