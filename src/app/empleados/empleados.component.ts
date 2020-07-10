@@ -7,6 +7,7 @@ import { Empleado } from '../models/empleado';
   styleUrls: ['./empleados.component.css']
 })
 export class EmpleadosComponent implements OnInit {
+  generoSelec = 'Todos';
   listEmpleados: Empleado[] = [
     { legajo: 1, nombre: 'Juan', apellido: 'Perez', genero: 'Masculino', salario: 70000 },
     { legajo: 2, nombre: 'Maria', apellido: 'Aliaga', genero: 'Femenino', salario: 85000 },
@@ -31,6 +32,10 @@ export class EmpleadosComponent implements OnInit {
 
   getFemeninos(): number {
     return this.listEmpleados.filter( list => list.genero === 'Femenino').length;
+  }
+
+  generoSeleccionado(genero: string): void {
+    this.generoSelec = genero;
   }
 
 }
